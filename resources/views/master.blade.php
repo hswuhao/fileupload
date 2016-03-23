@@ -14,6 +14,11 @@
     <body>
         <div class="container">
             <div class="content">
+                @if (Session::has('info'))
+                    <div class="alert alert-info" role="alert">
+                        {{ Session::get('info') }}
+                    </div>
+                @endif
                 @yield('content')
             </div>      
         </div>
