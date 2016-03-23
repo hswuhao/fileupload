@@ -12,11 +12,13 @@ class UploadController extends Controller
 {
     public function upload(Request $request)
     {
-    	$this->validate($request, 
+    	
+        $this->validate($request, 
     	[
-    		'file' => 'required|max:100000|mimes:zip'
+    		"file" => "required|max:100000|mimes:zip"
     	]);
-    	$file = $request->file('file');
+    	
+        $file = $request->file("file");
 
     	$name = time() . str_replace(' ', '_', $file->getClientOriginalName());
 
