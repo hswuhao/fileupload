@@ -26,7 +26,7 @@
         <script>
             Dropzone.options.fileUploadForm = 
             {
-                maxFileSize: 125,
+                maxFileSize: 50,
                 acceptedFiles: '.zip'
             };
         </script>
