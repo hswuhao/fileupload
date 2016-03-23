@@ -14,7 +14,7 @@ class UploadController extends Controller
     {
         $this->validate($request, 
     	[
-    		"file" => "required|max:100000|mimes:zip"
+    		"file" => "required|mimes:zip"
     	]);
     	
         $file = $request->file("file");
