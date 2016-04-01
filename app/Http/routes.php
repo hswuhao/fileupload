@@ -14,7 +14,7 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', function () {
-        return view('file-upload');
+        return view('home');
     });
 
     Route::post('/upload', 'UploadController@upload');

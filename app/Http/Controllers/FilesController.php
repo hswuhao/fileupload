@@ -16,7 +16,7 @@ class FilesController extends Controller
     {
 		$directory = 'uploads';
 
-		$files = Upload::all();
+		$files = Upload::orderBy('created_at', 'desc')->get();
 
 		return view('files', compact('files'));
     }
